@@ -18,7 +18,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # === Paths to datasets and models ===
-DATASET_PATH = r"C:\Users\DELL\OneDrive\Desktop\DL\archive5\kag2"
+DATASET_PATH = "./archive5/kag2"
 MODEL_PATH = "my_model_66.keras"
 RAINFALL_MODEL_PATH = 'rf_model.pkl'
 CROP_MODEL_PATH = 'crop_yield_model.pkl'
@@ -210,6 +210,5 @@ def predict_yield():
     return jsonify({'predicted_yield': round(predicted_yield, 2)})
 
 # Run Flask app
-if __name__ == "__main__":
-    os.makedirs("static", exist_ok=True)
-    app.run(host="0.0.0.0", port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
