@@ -31,14 +31,14 @@ model = load_model("./my_model_66.h5")
 
 # Rainfall prediction model
 with open(RAINFALL_MODEL_PATH, 'rb') as file:
-    rainfall_model = pickle.load(file)
+    rainfall_model = joblib.load(file)
 
 # Crop recommendation model
 crop_model = joblib.load(CROP_MODEL_PATH)
 
 # Yield prediction model
 with open(YIELD_MODEL_PATH, 'rb') as file:
-    yield_bundle = pickle.load(file)
+    yield_bundle = joblib.load(file)
 yield_model = yield_bundle['model']
 label_encoder_state = yield_bundle['label_encoder_state']
 label_encoder_crop = yield_bundle['label_encoder_crop']
