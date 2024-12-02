@@ -28,7 +28,7 @@ CROP_DATA_PATH = 'limited_top_ten_crops.csv'
 
 # === Load Models ===
 # Image-based crop classification model
-model = load_model(MODEL_PATH)
+model = load_model("my_model_66.keras")
 
 # Rainfall prediction model
 with open(RAINFALL_MODEL_PATH, 'rb') as file:
