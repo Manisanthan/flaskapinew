@@ -19,7 +19,6 @@ CORS(app)  # Enable CORS
 
 # === Paths to datasets and models ===
 DATASET_PATH = "./archive5/kag2"
-MODEL_PATH = "my_model_66.keras"
 RAINFALL_MODEL_PATH = 'rf_model.pkl'
 CROP_MODEL_PATH = 'crop_yield_model.pkl'
 YIELD_MODEL_PATH = 'yield.pkl'
@@ -28,7 +27,7 @@ CROP_DATA_PATH = 'limited_top_ten_crops.csv'
 
 # === Load Models ===
 # Image-based crop classification model
-model = load_model("my_model_66.keras")
+model = load_model("./my_model_66.h5")
 
 # Rainfall prediction model
 with open(RAINFALL_MODEL_PATH, 'rb') as file:
